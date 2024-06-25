@@ -16,7 +16,11 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', function() {
+   
+    return view('welcome');
+
+});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -27,9 +31,6 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 require __DIR__.'/auth.php';
-
-
-    
 
 
 

@@ -110,7 +110,11 @@
                     <div class="text-center text-sm sm:text-start">
                         &nbsp;
                     </div>
-
+                    @role('admin')
+                            I am a admin!
+                        @else
+                            I am not a admin...
+                        @endrole
                     <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
